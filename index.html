@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TouchSlider【WebAPP 图片滑动】</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta content="name" charset="Rodey">
+    <meta content="keyword" charset=" ">
+    <meta content="descriptions" charset=" ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-status-bar-style" content="black-translucent">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="css/touchSlider.css">
+    <style type="text/css" media="screen">
+    	body{ background-color: rgb(57, 190, 180);; }
+    </style>
+</head>
+<body>
+
+	<!-- 模板 -->
+
+	<div class="touchSlider-con" id="touchSliderCon">
+		<!-- <ul class="touchSilder-ul">
+			<li><a href="#" target="_blank"><img src="images/01.jpg"></a></li>
+			<li><a href="#" target="_blank"><img src="images/03.jpg"></a></li>
+			<li><a href="#" target="_blank"><img src="images/04.jpg"></a></li>
+			<li><a href="#" target="_blank"><img src="images/05.jpg"></a></li>
+			<li><a href="#" target="_blank"><img src="images/01.jpg"></a></li>
+			<li><a href="#" target="_blank"><img src="images/06.jpg"></a></li>
+		</ul>
+		<div class="touchSlider-btns">
+			<span data-index="1"></span>
+			<span data-index="2"></span>
+			<span data-index="3"></span>
+			<span data-index="4"></span>
+			<span data-index="5"></span>
+			<span data-index="6"></span>
+		</div>
+		<div class="touchSlider-tips"></div> -->
+	</div>
+
+	<div class="touchSlider-con" id="touchSliderCon2" style="margin-top: 50px;"></div>
+	<div class="touchSlider-con" id="touchSliderCon3" style="margin-top: 50px;"></div>
+
+	<script src="js/zepto.min.js"></script>
+	<script src="js/touch.js"></script>
+	<script src="js/TouchSlider.js"></script>
+	<script>
+		var data = [
+			{
+				"src": "images/01.jpg",
+				"link": "#",
+				"title": "01.jpg"
+			},
+			{
+				"src": "images/02.jpg",
+				"link": "#",
+				"title": "02.jpg"
+			},
+			{
+				"src": "images/03.jpg",
+				"link": "#",
+				"title": "03.jpg"
+			},
+			{
+				"src": "images/04.jpg",
+				"link": "#",
+				"title": "04.jpg"
+			},
+			{
+				"src": "images/05.jpg",
+				"link": "#",
+				"title": "05.jpg"
+			},
+			{
+				"src": "images/06.jpg",
+				"link": "#",
+				"title": "06.jpg"
+			}
+		];
+
+		$(document).ready(function(){
+			if(TouchSlider){
+				TouchSlider({
+					container: 'touchSliderCon',
+					height: 200,
+					index: 2,
+					duration: 0.3,
+					data: data,
+					isShowTip: true,
+					callback: function(index){
+						console.log(index)
+					}
+				});
+
+				TouchSlider({
+					container: 'touchSliderCon2',
+					width: 200,
+					height: 100,
+					index: 0,
+					duration: 0.25,
+					data: data,
+					isShowTip: false,
+					buttonStyle: 'width:10px;height:10px;margin:0px 3px;'
+				});
+
+				TouchSlider({
+					container: 'touchSliderCon3',
+					height: 50,
+					index: 0,
+					duration: 0.35,
+					data: data,
+					isShowTip: false,
+					buttonStyle: 'width:10px;height:10px;margin:0px 3px;display:none;'
+				});
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+	"code": "200",
+	"message": "successfuly",
+	"body": [
+		{
+			"src": "images/01.jpg",
+			"link": "#",
+			"title": "01.jpg"
+		},
+		{
+			"src": "images/02.jpg",
+			"link": "#",
+			"title": "02.jpg"
+		},
+		{
+			"src": "images/03.jpg",
+			"link": "#",
+			"title": "03.jpg"
+		},
+		{
+			"src": "images/04.jpg",
+			"link": "#",
+			"title": "04.jpg"
+		},
+		{
+			"src": "images/05.jpg",
+			"link": "#",
+			"title": "05.jpg"
+		},
+		{
+			"src": "images/06.jpg",
+			"link": "#",
+			"title": "06.jpg"
+		}
+	]
+}
