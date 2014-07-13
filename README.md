@@ -27,7 +27,7 @@
 	});
 </pre>
 
-<p>data数据</p>
+<h4>data数据</h4>
 
 <pre>
 	var data = [
